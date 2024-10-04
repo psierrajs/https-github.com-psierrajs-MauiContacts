@@ -63,6 +63,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Views\ContactsPage.xaml.cs">
+	    <DependentUpon>ContactsPage.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Views\EditContactPage.xaml.cs">
 	    <DependentUpon>EditContactPage.xaml</DependentUpon>
 	  </Compile>
@@ -72,7 +75,7 @@
 	  <MauiXaml Update="Views\AddContactPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\ContactPage.xaml">
+	  <MauiXaml Update="Views\ContactsPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\EditContactPage.xaml">
