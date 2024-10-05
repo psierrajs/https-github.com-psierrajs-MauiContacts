@@ -11,17 +11,33 @@
             HorizontalOptions="Center" />
         <Button x:Name="btnCancel" Text="Cancel" Clicked="btnCancel_Clicked"></Button>
     </StackLayout>-->
-    <VerticalStackLayout Spacing="10">
-        <Label Text="test lable" HorizontalOptions="Start" BackgroundColor="Grey"></Label>
-        <Label Text="test lable" HorizontalOptions="Center" BackgroundColor="Grey"></Label>
-        <Label Text="test lable" HorizontalOptions="End" BackgroundColor="Grey"></Label>
-        <BoxView Color="aqua" HeightRequest="50" WidthRequest="100" HorizontalOptions="Start"></BoxView>
-        <BoxView Color="blue" HeightRequest="50" WidthRequest="100" HorizontalOptions="Center"></BoxView>
-        <BoxView Color="red" HeightRequest="50" WidthRequest="100" HorizontalOptions="End"></BoxView>
-        <BoxView Color="Yellow" HeightRequest="50" WidthRequest="100" HorizontalOptions="Center"></BoxView>
-        <HorizontalStackLayout Spacing="5">
-            <Label Text="Name:" VerticalOptions="Center"></Label>
-            <Entry VerticalOptions="Center" ></Entry>
-        </HorizontalStackLayout>
+    <VerticalStackLayout Spacing="10" Margin="20, 20, 20, 0">
+
+        <Frame Padding="10,2,10,2">
+            <HorizontalStackLayout>
+                <Label Text="Name" VerticalOptions="Center" WidthRequest="60"></Label>
+                <Entry VerticalOptions="Center"></Entry>
+            </HorizontalStackLayout>
+        </Frame>
+
+        <Frame Padding="10,2,10,2">
+            <HorizontalStackLayout>
+                <Label Text="Email" VerticalOptions="Center" WidthRequest="60"></Label>
+                <Entry VerticalOptions="Center"></Entry>
+
+            </HorizontalStackLayout>
+        </Frame>
+        <Frame Padding="10,2,10,2">
+            <HorizontalStackLayout>
+                <Label Text="Phone" VerticalOptions="Center" WidthRequest="60"></Label>
+                <Entry VerticalOptions="Center"></Entry>
+            </HorizontalStackLayout>
+        </Frame>
+        <Frame Padding="10,2,10,2">
+            <HorizontalStackLayout>
+                <Label Text="Address" VerticalOptions="Center" WidthRequest="60"></Label>
+                <Entry VerticalOptions="Center"></Entry>
+            </HorizontalStackLayout>
+        </Frame>
     </VerticalStackLayout>
 </ContentPage>
