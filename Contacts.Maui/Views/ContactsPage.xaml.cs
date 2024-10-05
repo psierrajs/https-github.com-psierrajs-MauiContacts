@@ -27,9 +27,18 @@ public partial class ContactsPage : ContentPage
 
     public class Contact
     {
-        public string Name { get; set; }
-        public string Email { get; set; }
+        public string? Name { get; set; }
+        public string? Email { get; set; }
     }
 
+    private void listContacts_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+    {
+        DisplayAlert("test", "test", "OK");
+        listContacts.SelectedItem = null;
+    }
 
+    private void listContacts_ItemTapped(object sender, ItemTappedEventArgs e)
+    {
+
+    }
 }
