@@ -1,8 +1,8 @@
 namespace Contacts.Maui.Views;
 
-public partial class EditContact : ContentPage
+public partial class EditContactPage : ContentPage
 {
-	public EditContact()
+	public EditContactPage()
 	{
 		InitializeComponent();
 	}
