@@ -1,4 +1,4 @@
-﻿using AndroidX.Activity;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -72,6 +72,30 @@ namespace Contacts.Maui.Models
             {
                 _contacts.Remove(contact);
             }
+        }
+
+        public static List<Contact> SearchContacts(string filterText)
+        {
+            var contacts = _contacts.Where(x => !string.IsNullOrWhiteSpace(x.Name) && x.Name.StartsWith(filterText, StringComparison.OrdinalIgnoreCase))?.ToList();
+
+            if(contacts == null || contacts.Count <= 0)
+                contacts = _contacts.Where(x => !string.IsNullOrWhiteSpace(x.Email) && x.Email.StartsWith(filterText, StringComparison.OrdinalIgnoreCase))?.ToList();
+            else 
+                return contacts;
+
+            if (contacts == null || contacts.Count <= 0)
+                contacts = _contacts.Where(x => !string.IsNullOrWhiteSpace(x.Phone) && x.Phone.StartsWith(filterText, StringComparison.OrdinalIgnoreCase))?.ToList();
+            else
+                return contacts;
+
+            if (contacts == null || contacts.Count <= 0)
+                contacts = _contacts.Where(x => !string.IsNullOrWhiteSpace(x.Address) && x.Address.StartsWith(filterText, StringComparison.OrdinalIgnoreCase))?.ToList();
+            else
+                return contacts;
+            
+            return contacts;
+
+
         }
     }
 }

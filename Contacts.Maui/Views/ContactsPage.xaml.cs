@@ -17,6 +17,8 @@ public partial class ContactsPage : ContentPage
     {
         base.OnAppearing();
 
+        SearchBar.Text= string.Empty;
+
         LoadContacts();
     }
 
@@ -55,4 +57,12 @@ public partial class ContactsPage : ContentPage
         var contacts = new ObservableCollection<Contact>(ContactRepository.GetContacts());
         listContacts.ItemsSource = contacts;
     }
+
+    private void SearchBar_TextChanged(object sender, TextChangedEventArgs e)
+    {
+        var contacts = new ObservableCollection<Contact>(ContactRepository.SearchContacts(((SearchBar)sender).Text));
+        listContacts.ItemsSource = contacts;
+    }
+
+
 }
