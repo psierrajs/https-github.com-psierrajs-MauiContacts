@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AndroidX.Activity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -62,6 +63,15 @@ namespace Contacts.Maui.Models
             var maxId = _contacts.Max(x => x.ContactId);
             contact.ContactId = maxId + 1;
             _contacts.Add(contact);
+        }
+
+        public static void DeleteContact(int contactId)
+        {
+            var contact = _contacts.FirstOrDefault(x => x.ContactId == contactId);
+            if(contact != null)
+            {
+                _contacts.Remove(contact);
+            }
         }
     }
 }
